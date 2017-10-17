@@ -10,10 +10,24 @@
   <genPackages prefix="Stl" disposableProviderFactory="true" ecorePackage="stl.ecore#/">
     <genClasses ecoreClass="stl.ecore#//ProductionLineModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference stl.ecore#//ProductionLineModel/itemtypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference stl.ecore#//ProductionLineModel/area"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference stl.ecore#//ProductionLineModel/connectors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference stl.ecore#//ProductionLineModel/components"/>
     </genClasses>
     <genClasses ecoreClass="stl.ecore#//ItemTypes">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stl.ecore#//ItemTypes/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stl.ecore#//ItemTypes/description"/>
+    </genClasses>
+    <genClasses ecoreClass="stl.ecore#//Area">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stl.ecore#//Area/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Area/components"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Area/connectors"/>
+    </genClasses>
+    <genClasses ecoreClass="stl.ecore#//Components">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Components/area"/>
+    </genClasses>
+    <genClasses ecoreClass="stl.ecore#//Connectors">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Connectors/area"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -4,9 +4,30 @@
   <eClassifiers xsi:type="ecore:EClass" name="ProductionLineModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="itemtypes" upperBound="-1"
         eType="#//ItemTypes" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="area" lowerBound="1" upperBound="-1"
+        eType="#//Area" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" upperBound="-1"
+        eType="#//Connectors" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//Components" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ItemTypes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Area">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//Components" eOpposite="#//Components/area"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" upperBound="-1"
+        eType="#//Connectors" eOpposite="#//Connectors/area"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Components">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="area" lowerBound="1" eType="#//Area"
+        eOpposite="#//Area/components"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connectors">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="area" lowerBound="1" eType="#//Area"
+        eOpposite="#//Area/connectors"/>
   </eClassifiers>
 </ecore:EPackage>
