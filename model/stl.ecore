@@ -22,12 +22,21 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" upperBound="-1"
         eType="#//Connectors" eOpposite="#//Connectors/area"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Components">
+  <eClassifiers xsi:type="ecore:EClass" name="Components" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="area" lowerBound="1" eType="#//Area"
         eOpposite="#//Area/components"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="costs" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connectors">
     <eStructuralFeatures xsi:type="ecore:EReference" name="area" lowerBound="1" eType="#//Area"
         eOpposite="#//Area/connectors"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ItemGenerator" eSuperTypes="#//Components"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Conveyor" eSuperTypes="#//Components"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Turntable" eSuperTypes="#//Components"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Machine" eSuperTypes="#//Components"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Buffer" eSuperTypes="#//Components"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProductStore" eSuperTypes="#//Components"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WasteStore" eSuperTypes="#//Components"/>
 </ecore:EPackage>
