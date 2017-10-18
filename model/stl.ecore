@@ -39,4 +39,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="Buffer" eSuperTypes="#//Components"/>
   <eClassifiers xsi:type="ecore:EClass" name="ProductStore" eSuperTypes="#//Components"/>
   <eClassifiers xsi:type="ecore:EClass" name="WasteStore" eSuperTypes="#//Components"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Slots" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputSlot" eSuperTypes="#//Slots">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredAsImput" lowerBound="1"
+        eType="#//ItemTypes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputSlot" eSuperTypes="#//Slots">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="producedAsOutput" lowerBound="1"
+        eType="#//ItemTypes"/>
+  </eClassifiers>
 </ecore:EPackage>

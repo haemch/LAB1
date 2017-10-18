@@ -38,5 +38,14 @@
     <genClasses ecoreClass="stl.ecore#//Buffer"/>
     <genClasses ecoreClass="stl.ecore#//ProductStore"/>
     <genClasses ecoreClass="stl.ecore#//WasteStore"/>
+    <genClasses ecoreClass="stl.ecore#//Slots">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stl.ecore#//Slots/name"/>
+    </genClasses>
+    <genClasses ecoreClass="stl.ecore#//InputSlot">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//InputSlot/requiredAsImput"/>
+    </genClasses>
+    <genClasses ecoreClass="stl.ecore#//OutputSlot">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//OutputSlot/producedAsOutput"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
