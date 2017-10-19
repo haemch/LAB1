@@ -33,7 +33,10 @@
     <genClasses ecoreClass="stl.ecore#//Connectors">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Connectors/area"/>
     </genClasses>
-    <genClasses ecoreClass="stl.ecore#//ItemGenerator"/>
+    <genClasses ecoreClass="stl.ecore#//ItemGenerator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//ItemGenerator/outputslot"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//ItemGenerator/itemtypes"/>
+    </genClasses>
     <genClasses ecoreClass="stl.ecore#//Conveyor"/>
     <genClasses ecoreClass="stl.ecore#//Turntable"/>
     <genClasses ecoreClass="stl.ecore#//Machine"/>

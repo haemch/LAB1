@@ -36,7 +36,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="area" lowerBound="1" eType="#//Area"
         eOpposite="#//Area/connectors"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ItemGenerator" eSuperTypes="#//Components"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ItemGenerator" eSuperTypes="#//Components">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputslot" lowerBound="1"
+        eType="#//OutputSlot"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="itemtypes" lowerBound="1"
+        eType="#//ItemTypes"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Conveyor" eSuperTypes="#//Components"/>
   <eClassifiers xsi:type="ecore:EClass" name="Turntable" eSuperTypes="#//Components"/>
   <eClassifiers xsi:type="ecore:EClass" name="Machine" eSuperTypes="#//Components"/>
