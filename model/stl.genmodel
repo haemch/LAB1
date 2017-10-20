@@ -32,6 +32,8 @@
     </genClasses>
     <genClasses ecoreClass="stl.ecore#//Connectors">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Connectors/area"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Connectors/inputslot"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Connectors/outputslot"/>
     </genClasses>
     <genClasses ecoreClass="stl.ecore#//ItemGenerator">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//ItemGenerator/outputslot"/>
