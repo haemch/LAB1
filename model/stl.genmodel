@@ -41,11 +41,26 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Conveyor/inputslot"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Conveyor/outputslot"/>
     </genClasses>
-    <genClasses ecoreClass="stl.ecore#//Turntable"/>
-    <genClasses ecoreClass="stl.ecore#//Machine"/>
-    <genClasses ecoreClass="stl.ecore#//Buffer"/>
-    <genClasses ecoreClass="stl.ecore#//ProductStore"/>
-    <genClasses ecoreClass="stl.ecore#//WasteStore"/>
+    <genClasses ecoreClass="stl.ecore#//Turntable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Turntable/inputslot"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Turntable/outputslot"/>
+    </genClasses>
+    <genClasses ecoreClass="stl.ecore#//Machine">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Machine/inputslot"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Machine/outputslot"/>
+    </genClasses>
+    <genClasses ecoreClass="stl.ecore#//Buffer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Buffer/inputslot"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Buffer/outputslot"/>
+    </genClasses>
+    <genClasses ecoreClass="stl.ecore#//ProductStore">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stl.ecore#//ProductStore/capacity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//ProductStore/inputslot"/>
+    </genClasses>
+    <genClasses ecoreClass="stl.ecore#//WasteStore">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stl.ecore#//WasteStore/capacity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//WasteStore/inputslot"/>
+    </genClasses>
     <genClasses ecoreClass="stl.ecore#//Slots">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stl.ecore#//Slots/name"/>
     </genClasses>
