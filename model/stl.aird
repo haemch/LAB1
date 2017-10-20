@@ -1466,7 +1466,7 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_w-3CcbWLEeebV7IjA7XWww" showIcon="false">
           <customFeatures>labelFormat</customFeatures>
         </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_w-3CcrWLEeebV7IjA7XWww" showIcon="false" labelColor="39,76,114">
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_w-3CcrWLEeebV7IjA7XWww" labelSize="6" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelFormat</customFeatures>
         </endLabelStyle>
       </ownedStyle>
