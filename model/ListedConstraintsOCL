@@ -5,3 +5,5 @@ OCL:
 	4. ItemGenerator ItemType == OutputSlot ItemType
 	5. WasteStore and ProductStore: Capacity > 0 
 	6. WasteStore and ProductStore: Capacity >= ItemTypes
+	7. Connected slots must specify the same item types
+	8. ToDo: The connector has to be defined in the area that also contains the component owning the connected output

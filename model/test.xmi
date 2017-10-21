@@ -9,17 +9,19 @@
       name="IT1"/>
   <itemtypes
       name="IT2"/>
-  <area components="//@components.0 //@components.1"/>
+  <area components="//@components.0 //@components.1"
+      connectors="//@connectors.0"/>
+  <connectors
+      area="//@area.0"
+      inputslot="//@slots.0"
+      outputslot="//@slots.1"/>
   <components
       xsi:type="stl:ProductStore"
       area="//@area.0"
       costs="3"
       capacity="2"
       inputslot="//@slots.0"
-      itemtypes="//@itemtypes.0 //@itemtypes.1">
-    <service
-        reliability="0.4"/>
-  </components>
+      itemtypes="//@itemtypes.0 //@itemtypes.1"/>
   <components
       xsi:type="stl:ItemGenerator"
       area="//@area.0"
@@ -27,7 +29,8 @@
       outputslot="//@slots.1"
       itemtypes="//@itemtypes.1"/>
   <slots xsi:type="stl:InputSlot"
-      requiredAsImput="//@itemtypes.0"/>
+      requiredAsImput="//@itemtypes.1"/>
   <slots xsi:type="stl:OutputSlot"
+      name=""
       producedAsOutput="//@itemtypes.1"/>
 </stl:ProductionLineModel>
