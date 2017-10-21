@@ -1,3 +1,7 @@
 OCL: 
-	1. Components Costs >=0
-	2. ItemTypes size(name) >0
+	1. Components: Costs >=0
+	2. ItemTypes: size(name) >0
+	3. Service: Reliability [0..1]
+	4. ItemGenerator ItemType == OutputSlot ItemType
+	5. WasteStore and ProductStore: Capacity > 0 
+	6. WasteStore and ProductStore: Capacity >= ItemTypes

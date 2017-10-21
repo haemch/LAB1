@@ -7,12 +7,27 @@
     xsi:schemaLocation="http://www.example.org/stl stl.ecore">
   <itemtypes
       name="IT1"/>
-  <area components="//@components.0"/>
+  <itemtypes
+      name="IT2"/>
+  <area components="//@components.0 //@components.1"/>
   <components
       xsi:type="stl:ProductStore"
       area="//@area.0"
       costs="3"
-      inputslot="//@slots.0"/>
+      capacity="2"
+      inputslot="//@slots.0"
+      itemtypes="//@itemtypes.0 //@itemtypes.1">
+    <service
+        reliability="0.4"/>
+  </components>
+  <components
+      xsi:type="stl:ItemGenerator"
+      area="//@area.0"
+      name=""
+      outputslot="//@slots.1"
+      itemtypes="//@itemtypes.1"/>
   <slots xsi:type="stl:InputSlot"
       requiredAsImput="//@itemtypes.0"/>
+  <slots xsi:type="stl:OutputSlot"
+      producedAsOutput="//@itemtypes.1"/>
 </stl:ProductionLineModel>

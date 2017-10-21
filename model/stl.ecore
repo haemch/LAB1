@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="stl" nsURI="http://www.example.org/stl" nsPrefix="stl">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
-    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
@@ -61,6 +61,12 @@
         eType="#//OutputSlot"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ItemGenerator" eSuperTypes="#//Components">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="sameItemOutput"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="sameItemOutput" value="self.itemtypes = self.outputslot.producedAsOutput"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputslot" lowerBound="1"
         eType="#//OutputSlot"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="itemtypes" lowerBound="1"
@@ -91,16 +97,34 @@
         eType="#//OutputSlot"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProductStore" eSuperTypes="#//Components">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="capacityGreaterThan1 enoughCapacity"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="capacityGreaterThan1" value="self.capacity >0"/>
+      <details key="enoughCapacity" value="self.capacity >= self.itemtypes->size()"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputslot" lowerBound="1"
         eType="#//InputSlot"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="itemtypes" upperBound="-1"
+        eType="#//ItemTypes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WasteStore" eSuperTypes="#//Components">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="capacityGreaterThan1 enoughCapacity"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="capacityGreaterThan1" value="self.capacity >0"/>
+      <details key="enoughCapacity" value="self.capacity >= self.itemtypes->size()"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputslot" lowerBound="1"
         eType="#//InputSlot"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="itemtypes" upperBound="-1"
+        eType="#//ItemTypes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Slots" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -114,6 +138,12 @@
         eType="#//ItemTypes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Service">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="reliailityRange"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="reliailityRange" value="self.reliability >=0 and self.reliability &lt;=1"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reliability" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
