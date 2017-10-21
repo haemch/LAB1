@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stl:ProductionLineModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stl="http://www.example.org/stl"
+    xsi:schemaLocation="http://www.example.org/stl stl.ecore">
+  <itemtypes
+      name="IT1"/>
+  <area components="//@components.0"/>
+  <components
+      xsi:type="stl:ProductStore"
+      area="//@area.0"
+      costs="3"
+      inputslot="//@slots.0"/>
+  <slots xsi:type="stl:InputSlot"
+      requiredAsImput="//@itemtypes.0"/>
+</stl:ProductionLineModel>
