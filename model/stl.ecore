@@ -56,17 +56,22 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connectors">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="sameItemTypes"/>
+      <details key="constraints" value="sameItemTypes connectedArea"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="sameItemTypes" value="self.inputslot.requiredAsImput = self.outputslot.producedAsOutput"/>
+      <details key="connectedArea" value="self.input_component.area = self.area"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="area" lowerBound="1" eType="#//Area"
         eOpposite="#//Area/connectors"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputslot" lowerBound="1"
-        eType="#//InputSlot"/>
+        eType="#//InputSlot" eOpposite="#//InputSlot/connectors"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputslot" lowerBound="1"
-        eType="#//OutputSlot"/>
+        eType="#//OutputSlot" eOpposite="#//OutputSlot/connectors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input_component" lowerBound="1"
+        eType="#//Components"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output_component" lowerBound="1"
+        eType="#//Components"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ItemGenerator" eSuperTypes="#//Components">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -140,10 +145,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="InputSlot" eSuperTypes="#//Slots">
     <eStructuralFeatures xsi:type="ecore:EReference" name="requiredAsImput" lowerBound="1"
         eType="#//ItemTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" lowerBound="1"
+        eType="#//Connectors" eOpposite="#//Connectors/inputslot"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OutputSlot" eSuperTypes="#//Slots">
     <eStructuralFeatures xsi:type="ecore:EReference" name="producedAsOutput" lowerBound="1"
         eType="#//ItemTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" lowerBound="1"
+        eType="#//Connectors" eOpposite="#//Connectors/outputslot"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Service">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">

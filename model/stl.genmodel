@@ -35,6 +35,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Connectors/area"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Connectors/inputslot"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Connectors/outputslot"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Connectors/input_component"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//Connectors/output_component"/>
     </genClasses>
     <genClasses ecoreClass="stl.ecore#//ItemGenerator">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//ItemGenerator/outputslot"/>
@@ -71,9 +73,11 @@
     </genClasses>
     <genClasses ecoreClass="stl.ecore#//InputSlot">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//InputSlot/requiredAsImput"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//InputSlot/connectors"/>
     </genClasses>
     <genClasses ecoreClass="stl.ecore#//OutputSlot">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//OutputSlot/producedAsOutput"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stl.ecore#//OutputSlot/connectors"/>
     </genClasses>
     <genClasses ecoreClass="stl.ecore#//Service">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stl.ecore#//Service/name"/>
